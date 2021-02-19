@@ -26,6 +26,14 @@
         <translation>Cerrar</translation>
     </message>
     <message>
+        <source>Delete the currently selected address from the list</source>
+        <translation>Eliminar la dirección seleccionada de la lista</translation>
+    </message>
+    <message>
+        <source>Export the data in the current tab to a file</source>
+        <translation>Exportar los datos en la pestaña actual a un archivo</translation>
+    </message>
+    <message>
         <source>&amp;Export</source>
         <translation>Exportar</translation>
     </message>
@@ -56,13 +64,13 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>DogecoinGUI</name>
+    <name>BitcoinGUI</name>
     <message>
         <source>Synchronizing with network...</source>
         <translation>Sincronizando con la red...</translation>
     </message>
     <message>
-        <source>&amp;Wow</source>
+        <source>&amp;Overview</source>
         <translation>&amp;Vista previa</translation>
     </message>
     <message>
@@ -102,24 +110,24 @@
         <translation>Cambiar contraseña</translation>
     </message>
     <message>
-        <source>&amp;Such sending addresses...</source>
+        <source>&amp;Sending addresses...</source>
         <translation>Enviando direcciones</translation>
     </message>
     <message>
-        <source>&amp;Much receiving addresses...</source>
+        <source>&amp;Receiving addresses...</source>
         <translation>Recibiendo direcciones</translation>
     </message>
     <message>
-        <source>Send coins to a Dogecoin address</source>
-        <translation>Enviar monedas a una dirección Dogecoin</translation>
+        <source>Send coins to a Fastcoin address</source>
+        <translation>Enviar monedas a una dirección Fastcoin</translation>
     </message>
     <message>
         <source>Change the passphrase used for wallet encryption</source>
         <translation>Cambie la clave utilizada para el cifrado del monedero</translation>
     </message>
     <message>
-        <source>Dogecoin</source>
-        <translation>Dogecoin</translation>
+        <source>Fastcoin</source>
+        <translation>Fastcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -244,6 +252,10 @@
 <context>
     <name>Intro</name>
     <message>
+        <source>Fastcoin</source>
+        <translation>Fastcoin</translation>
+    </message>
+    <message>
         <source>Error</source>
         <translation>Error</translation>
     </message>
@@ -265,8 +277,16 @@
         <translation>Opciones</translation>
     </message>
     <message>
+        <source>Size of &amp;database cache</source>
+        <translation>Tamaño del cache de la &amp;base de datos</translation>
+    </message>
+    <message>
         <source>W&amp;allet</source>
         <translation>Billetera</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>Error</translation>
     </message>
     </context>
 <context>
@@ -284,7 +304,11 @@
     </context>
 <context>
     <name>QObject</name>
-    </context>
+    <message>
+        <source>unknown</source>
+        <translation>desconocido</translation>
+    </message>
+</context>
 <context>
     <name>QObject::QObject</name>
     </context>
@@ -435,9 +459,13 @@
     </context>
 <context>
     <name>WalletView</name>
+    <message>
+        <source>Export the data in the current tab to a file</source>
+        <translation>Exportar los datos en la pestaña actual a un archivo</translation>
+    </message>
     </context>
 <context>
-    <name>dogecoin-core</name>
+    <name>bitcoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Opciones:</translation>

@@ -26,11 +26,11 @@
         <translation>&amp;அழி</translation>
     </message>
     <message>
-        <source>Such sending addresses</source>
+        <source>Sending addresses</source>
         <translation>முகவரிகள் அனுப்பப்படுகின்றன</translation>
     </message>
     <message>
-        <source>Much receiving addresses</source>
+        <source>Receiving addresses</source>
         <translation>முகவரிகள் பெறப்படுகின்றன</translation>
     </message>
     </context>
@@ -52,9 +52,9 @@
     </message>
     </context>
 <context>
-    <name>DogecoinGUI</name>
+    <name>BitcoinGUI</name>
     <message>
-        <source>&amp;Wow</source>
+        <source>&amp;Overview</source>
         <translation>&amp;கண்ணோட்டம்</translation>
     </message>
     <message>
@@ -90,19 +90,19 @@
         <translation>&amp;செய்தியை சரிசெய்...</translation>
     </message>
     <message>
-        <source>Dogecoin</source>
-        <translation>Dogecoin</translation>
+        <source>Fastcoin</source>
+        <translation>Fastcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
         <translation>பணப்பை</translation>
     </message>
     <message>
-        <source>&amp;Such Send</source>
+        <source>&amp;Send</source>
         <translation>&amp;அனுப்பு</translation>
     </message>
     <message>
-        <source>&amp;Much Receive</source>
+        <source>&amp;Receive</source>
         <translation>&amp;பெறு</translation>
     </message>
     <message>
@@ -225,6 +225,10 @@
         <translation>நல்வரவு</translation>
     </message>
     <message>
+        <source>Fastcoin</source>
+        <translation>Fastcoin</translation>
+    </message>
+    <message>
         <source>Error</source>
         <translation>தவறு</translation>
     </message>
@@ -313,6 +317,10 @@
         <source>none</source>
         <translation>none</translation>
     </message>
+    <message>
+        <source>Error</source>
+        <translation>தவறு</translation>
+    </message>
     </context>
 <context>
     <name>OverviewPage</name>
@@ -350,6 +358,10 @@
         <source>User Agent</source>
         <translation>பயனர் முகவர்</translation>
     </message>
+    <message>
+        <source>Sent</source>
+        <translation>அனுப்பிய</translation>
+    </message>
     </context>
 <context>
     <name>QObject</name>
@@ -380,6 +392,22 @@
     <message>
         <source>%1 and %2</source>
         <translation>%1 மற்றும் %2</translation>
+    </message>
+    <message>
+        <source>%1 B</source>
+        <translation>%1 B</translation>
+    </message>
+    <message>
+        <source>%1 KB</source>
+        <translation>%1 KB</translation>
+    </message>
+    <message>
+        <source>%1 MB</source>
+        <translation>%1 MB</translation>
+    </message>
+    <message>
+        <source>%1 GB</source>
+        <translation>%1 GB</translation>
     </message>
     </context>
 <context>
@@ -447,10 +475,6 @@
         <translation>&amp;பணியகம்</translation>
     </message>
     <message>
-        <source>&amp;Clear</source>
-        <translation>&amp;வழுநீக்கு</translation>
-    </message>
-    <message>
         <source>Totals</source>
         <translation>மொத்தம்</translation>
     </message>
@@ -477,22 +501,6 @@
     <message>
         <source>1 &amp;year</source>
         <translation>1 &amp;ஆண்டு</translation>
-    </message>
-    <message>
-        <source>%1 B</source>
-        <translation>%1 B</translation>
-    </message>
-    <message>
-        <source>%1 KB</source>
-        <translation>%1 KB</translation>
-    </message>
-    <message>
-        <source>%1 MB</source>
-        <translation>%1 MB</translation>
-    </message>
-    <message>
-        <source>%1 GB</source>
-        <translation>%1 GB</translation>
     </message>
     <message>
         <source>via %1</source>
@@ -607,14 +615,6 @@
         <translation>மறை</translation>
     </message>
     <message>
-        <source>normal</source>
-        <translation>இயல்பான</translation>
-    </message>
-    <message>
-        <source>fast</source>
-        <translation>வேகமாக</translation>
-    </message>
-    <message>
         <source>Balance:</source>
         <translation>மீதி:</translation>
     </message>
@@ -706,10 +706,10 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>dogecoin-core</name>
+    <name>bitcoin-core</name>
     <message>
-        <source>Dogecoin Core</source>
-        <translation>Dogecoin மையம்</translation>
+        <source>Fastcoin Core</source>
+        <translation>Fastcoin மையம்</translation>
     </message>
     <message>
         <source>(default: %u)</source>

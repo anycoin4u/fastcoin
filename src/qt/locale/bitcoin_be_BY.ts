@@ -54,20 +54,20 @@
         <translation>Выбраць</translation>
     </message>
     <message>
-        <source>Such sending addresses</source>
+        <source>Sending addresses</source>
         <translation>адрасы Адпраўкі</translation>
     </message>
     <message>
-        <source>Much receiving addresses</source>
+        <source>Receiving addresses</source>
         <translation>адрасы Прымання</translation>
     </message>
     <message>
-        <source>These are your Dogecoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Тут знаходзяцца Біткойн-адрасы для высылання плацяжоў. Заўсёды спраўджвайце колькасць і адрас прызначэння перад здзяйсненнем транзакцыі.</translation>
+        <source>These are your Fastcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Тут знаходзяцца Fastcoin-адрасы для высылання плацяжоў. Заўсёды спраўджвайце колькасць і адрас прызначэння перад здзяйсненнем транзакцыі.</translation>
     </message>
     <message>
-        <source>These are your Dogecoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Тут знаходзяцца Біткойн-адрасы для прымання плацяжоў. Пажадана выкарыстоўваць новы адрас для кожнай транзакцыі.</translation>
+        <source>These are your Fastcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Тут знаходзяцца Fastcoin-адрасы для прымання плацяжоў. Пажадана выкарыстоўваць новы адрас для кожнай транзакцыі.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,7 +168,7 @@
         <translation>Пацвердзіце шыфраванне гаманца</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR DOGECOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FASTCOINS&lt;/b&gt;!</source>
         <translation>Увага: калі вы зашыфруеце свой гаманец і страціце парольную фразу, то &lt;b&gt;СТРАЦІЦЕ ЎСЕ СВАЕ БІТКОЙНЫ&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -220,7 +220,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>DogecoinGUI</name>
+    <name>BitcoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Падпісаць паведамленне...</translation>
@@ -230,7 +230,7 @@
         <translation>Сінхранізацыя з сецівам...</translation>
     </message>
     <message>
-        <source>&amp;Wow</source>
+        <source>&amp;Overview</source>
         <translation>Агляд</translation>
     </message>
     <message>
@@ -282,11 +282,11 @@
         <translation>&amp;Change Passphrase...</translation>
     </message>
     <message>
-        <source>Such &amp;sending addresses...</source>
+        <source>&amp;Sending addresses...</source>
         <translation>Адрасы дасылання...</translation>
     </message>
     <message>
-        <source>Much &amp;receiving addresses...</source>
+        <source>&amp;Receiving addresses...</source>
         <translation>Адрасы прымання...</translation>
     </message>
     <message>
@@ -298,8 +298,8 @@
         <translation>Пераіндэксацыя блокаў на дыску...</translation>
     </message>
     <message>
-        <source>Send coins to a Dogecoin address</source>
-        <translation>Даслаць манеты на Біткойн-адрас</translation>
+        <source>Send coins to a Fastcoin address</source>
+        <translation>Даслаць манеты на Fastcoin-адрас</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -322,19 +322,19 @@
         <translation>Праверыць паведамленне...</translation>
     </message>
     <message>
-        <source>Dogecoin</source>
-        <translation>Біткойн</translation>
+        <source>Fastcoin</source>
+        <translation>Fastcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
         <translation>Гаманец</translation>
     </message>
     <message>
-        <source>&amp;Such Send</source>
+        <source>&amp;Send</source>
         <translation>Даслаць</translation>
     </message>
     <message>
-        <source>&amp;Much Receive</source>
+        <source>&amp;Receive</source>
         <translation>Атрымаць</translation>
     </message>
     <message>
@@ -350,12 +350,12 @@
         <translation>Зашыфраваць прыватныя ключы, якия належаць вашаму гаманцу</translation>
     </message>
     <message>
-        <source>Sign messages with your Dogecoin addresses to prove you own them</source>
-        <translation>Падпісаць паведамленне з дапамогай Біткойн-адраса каб даказаць, што яно належыць вам</translation>
+        <source>Sign messages with your Fastcoin addresses to prove you own them</source>
+        <translation>Падпісаць паведамленне з дапамогай Fastcoin-адраса каб даказаць, што яно належыць вам</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Dogecoin addresses</source>
-        <translation>Спраўдзіць паведамленне з дапамогай Біткойн-адраса каб даказаць, што яно належыць вам</translation>
+        <source>Verify messages to ensure they were signed with specified Fastcoin addresses</source>
+        <translation>Спраўдзіць паведамленне з дапамогай Fastcoin-адраса каб даказаць, што яно належыць вам</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -370,8 +370,8 @@
         <translation>Дапамога</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and dogecoin: URIs)</source>
-        <translation>Запатрабаваць плацёж (генеруецца QR-код для біткойн URI)</translation>
+        <source>Request payments (generates QR codes and fastcoin: URIs)</source>
+        <translation>Запатрабаваць плацёж (генеруецца QR-код для fastcoin URI)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -382,8 +382,8 @@
         <translation>Паказаць спіс адрасоў і метак для прымання</translation>
     </message>
     <message>
-        <source>Open a dogecoin: URI or payment request</source>
-        <translation>Адкрыць біткойн: URI ці запыт плацяжу</translation>
+        <source>Open a fastcoin: URI or payment request</source>
+        <translation>Адкрыць fastcoin: URI ці запыт плацяжу</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -675,6 +675,10 @@
         <translation>Вітаем</translation>
     </message>
     <message>
+        <source>Fastcoin</source>
+        <translation>Fastcoin</translation>
+    </message>
+    <message>
         <source>Error</source>
         <translation>Памылка</translation>
     </message>
@@ -707,6 +711,10 @@
         <source>W&amp;allet</source>
         <translation>Гаманец</translation>
     </message>
+    <message>
+        <source>Error</source>
+        <translation>Памылка</translation>
+    </message>
     </context>
 <context>
     <name>OverviewPage</name>
@@ -731,7 +739,11 @@
         <source>%1 and %2</source>
         <translation>%1 і %2</translation>
     </message>
-    </context>
+    <message>
+        <source>unknown</source>
+        <translation>невядома</translation>
+    </message>
+</context>
 <context>
     <name>QObject::QObject</name>
     </context>
@@ -1147,10 +1159,6 @@
         <translation>Іншыя</translation>
     </message>
     <message>
-        <source>Enter address or label to search</source>
-        <translation>Увядзіце адрас ці пазнаку для пошуку</translation>
-    </message>
-    <message>
         <source>Min amount</source>
         <translation>Мін. колькасць</translation>
     </message>
@@ -1227,7 +1235,7 @@
         <source>Send Coins</source>
         <translation>Даслаць Манеты</translation>
     </message>
-</context>
+    </context>
 <context>
     <name>WalletView</name>
     <message>
@@ -1240,7 +1248,7 @@
     </message>
     </context>
 <context>
-    <name>dogecoin-core</name>
+    <name>bitcoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Опцыі:</translation>
@@ -1258,8 +1266,8 @@
         <translation>Запусціць у фоне як дэман і прымаць каманды</translation>
     </message>
     <message>
-        <source>Dogecoin Core</source>
-        <translation>Dogecoin Core</translation>
+        <source>Fastcoin Core</source>
+        <translation>Fastcoin Core</translation>
     </message>
     <message>
         <source>Do you want to rebuild the block database now?</source>
@@ -1300,10 +1308,6 @@
     <message>
         <source>Verifying blocks...</source>
         <translation>Праверка блокаў...</translation>
-    </message>
-    <message>
-        <source>Verifying wallet...</source>
-        <translation>Праверка гаманца...</translation>
     </message>
     <message>
         <source>Wallet options:</source>
@@ -1352,10 +1356,6 @@
     <message>
         <source>Execute command when the best block changes (%s in cmd is replaced by block hash)</source>
         <translation>Выканаць каманду калі лепшы блок зменіцца (%s замяняецца на хэш блока)</translation>
-    </message>
-    <message>
-        <source>Loading addresses...</source>
-        <translation>Загружаем адрасы...</translation>
     </message>
     <message>
         <source>Insufficient funds</source>

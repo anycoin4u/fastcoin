@@ -38,20 +38,28 @@
         <translation>Zgjidh adresen ku do te dergoni monedhat</translation>
     </message>
     <message>
-        <source>Such sending addresses</source>
+        <source>Choose the address to receive coins with</source>
+        <translation>Zgjidh adresën ku do të merrni monedhat</translation>
+    </message>
+    <message>
+        <source>C&amp;hoose</source>
+        <translation>Zgjidh</translation>
+    </message>
+    <message>
+        <source>Sending addresses</source>
         <translation>Duke derguar adresen</translation>
     </message>
     <message>
-        <source>Much receiving addresses</source>
+        <source>Receiving addresses</source>
         <translation>Duke marr adresen</translation>
     </message>
     <message>
-        <source>These are your Dogecoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Këto janë Dogecoin adresat e juaja për të dërguar pagesa. Gjithmon kontrolloni shumën dhe adresën pranuese para se të dërgoni monedha.</translation>
+        <source>These are your Fastcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Këto janë Fastcoin adresat e juaja për të dërguar pagesa. Gjithmon kontrolloni shumën dhe adresën pranuese para se të dërgoni monedha.</translation>
     </message>
     <message>
-        <source>These are your Dogecoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Këto janë Dogecoin adresat e juaja për të pranuar pagesa. Rekomandohet që gjithmon të përdorni një adresë të re për çdo transaksion.</translation>
+        <source>These are your Fastcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Këto janë Fastcoin adresat e juaja për të pranuar pagesa. Rekomandohet që gjithmon të përdorni një adresë të re për çdo transaksion.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -101,15 +109,19 @@
     <name>AskPassphraseDialog</name>
     <message>
         <source>Enter passphrase</source>
-        <translation>Futni frazkalimin</translation>
+        <translation>Futni fjalëkalimin</translation>
     </message>
     <message>
         <source>New passphrase</source>
-        <translation>Frazkalim i ri</translation>
+        <translation>Fjalëkalimi i ri</translation>
     </message>
     <message>
         <source>Repeat new passphrase</source>
-        <translation>Përsërisni frazkalimin e ri</translation>
+        <translation>Përsërisni fjalëkalimin e ri</translation>
+    </message>
+    <message>
+        <source>Show password</source>
+        <translation>Trego fjalëkalimin</translation>
     </message>
     <message>
         <source>Encrypt wallet</source>
@@ -117,11 +129,11 @@
     </message>
     <message>
         <source>This operation needs your wallet passphrase to unlock the wallet.</source>
-        <translation>Ky veprim ka nevojë per frazkalimin e portofolit tuaj që të ç'kyç portofolin.</translation>
+        <translation>Ky veprim ka nevojë per fjalëkalimin e portofolit tuaj që të hapë portofolin.</translation>
     </message>
     <message>
         <source>Unlock wallet</source>
-        <translation>ç'kyç portofolin.</translation>
+        <translation>Hap portofolin.</translation>
     </message>
     <message>
         <source>This operation needs your wallet passphrase to decrypt the wallet.</source>
@@ -133,7 +145,11 @@
     </message>
     <message>
         <source>Change passphrase</source>
-        <translation>Ndrysho frazkalimin</translation>
+        <translation>Ndrysho fjalëkalimin</translation>
+    </message>
+    <message>
+        <source>Enter the old passphrase and new passphrase to the wallet.</source>
+        <translation>Fusni fjalëkalimin e vjetër dhe fjalëkalimin e ri që të hapni portofolin.</translation>
     </message>
     <message>
         <source>Confirm wallet encryption</source>
@@ -176,13 +192,13 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>DogecoinGUI</name>
+    <name>BitcoinGUI</name>
     <message>
         <source>Synchronizing with network...</source>
         <translation>Duke u sinkronizuar me rrjetin...</translation>
     </message>
     <message>
-        <source>&amp;Wow</source>
+        <source>&amp;Overview</source>
         <translation>&amp;Përmbledhje</translation>
     </message>
     <message>
@@ -206,7 +222,7 @@
         <translation>&amp;Opsione</translation>
     </message>
     <message>
-        <source>&amp;Much receiving addresses...</source>
+        <source>&amp;Receiving addresses...</source>
         <translation>Duke marr adresen</translation>
     </message>
     <message>
@@ -214,19 +230,19 @@
         <translation>Ndrysho frazkalimin e përdorur per enkriptimin e portofolit</translation>
     </message>
     <message>
-        <source>Dogecoin</source>
-        <translation>Dogecoin</translation>
+        <source>Fastcoin</source>
+        <translation>Fastcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
         <translation>Portofol</translation>
     </message>
     <message>
-        <source>&amp;Such Send</source>
+        <source>&amp;Send</source>
         <translation>&amp;Dergo</translation>
     </message>
     <message>
-        <source>&amp;Much Receive</source>
+        <source>&amp;Receive</source>
         <translation>&amp;Merr</translation>
     </message>
     <message>
@@ -385,6 +401,10 @@
         <translation>Miresevini</translation>
     </message>
     <message>
+        <source>Fastcoin</source>
+        <translation>Fastcoin</translation>
+    </message>
+    <message>
         <source>Error</source>
         <translation>Problem</translation>
     </message>
@@ -408,6 +428,10 @@
     <message>
         <source>W&amp;allet</source>
         <translation>Portofol</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>Problem</translation>
     </message>
     </context>
 <context>
@@ -433,7 +457,11 @@
         <source>%1 and %2</source>
         <translation>%1 dhe %2</translation>
     </message>
-    </context>
+    <message>
+        <source>unknown</source>
+        <translation>i/e panjohur</translation>
+    </message>
+</context>
 <context>
     <name>QObject::QObject</name>
     </context>
@@ -449,10 +477,6 @@
     <message>
         <source>&amp;Open</source>
         <translation>&amp;Hap</translation>
-    </message>
-    <message>
-        <source>&amp;Clear</source>
-        <translation>&amp;Pastro</translation>
     </message>
     <message>
         <source>never</source>
@@ -769,7 +793,7 @@
         <source>Send Coins</source>
         <translation>Dërgo Monedha</translation>
     </message>
-</context>
+    </context>
 <context>
     <name>WalletView</name>
     <message>
@@ -778,14 +802,14 @@
     </message>
     </context>
 <context>
-    <name>dogecoin-core</name>
+    <name>bitcoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Opsionet:</translation>
     </message>
     <message>
-        <source>Dogecoin Core</source>
-        <translation>Berthama Dogecoin</translation>
+        <source>Fastcoin Core</source>
+        <translation>Berthama Fastcoin</translation>
     </message>
     <message>
         <source>Information</source>
