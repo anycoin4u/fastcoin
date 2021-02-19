@@ -1,20 +1,17 @@
-# Fastcoin Core [FST, Ð]
+# Fastcoin Core [FST]
 ==========================
 
-![Fastcoin](http://static.tumblr.com/ppdj5y9/Ae9mxmxtp/300coin.png)
 
-[![Build Status](https://travis-ci.org/fastcoin/fastcoin.svg?branch=1.14-dev)](https://travis-ci.org/fastcoin/fastcoin) [![tip for next commit](https://tip4commit.com/projects/702.svg)](https://tip4commit.com/github/fastcoin/fastcoin)
-
-## What is Fastcoin? – Such coin
+## What is Fastcoin? 
 Fastcoin is a cryptocurrency like Bitcoin, although it does not use SHA256 as its proof of work (POW). Taking development cues from Tenebrix and Litecoin, Fastcoin currently employs a simplified variant of scrypt.
 
-http://fastcoin.com/
+http://fastcoin-project.com/
 
-## License – Much license
+## License 
 Fastcoin Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see https://opensource.org/licenses/MIT.
 
-## Development and contributions – omg developers
+## Development and contributions
 Development is ongoing, and the development team, as well as other volunteers, can freely work in their own trees and submit pull requests when features or bug fixes are ready.
 
 #### Version strategy
@@ -55,8 +52,8 @@ not straightforward.
   - [Windows Build Notes](doc/build-msw.md)
 
 ### Fastcoin ports
-RPC 22555
-P2P 22556
+RPC 9527
+P2P 9526
 
 
 **compiling for debugging**
