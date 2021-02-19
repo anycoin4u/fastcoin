@@ -178,6 +178,7 @@ public:
         if (scriptPubKey.IsUnspendable())
             return 0;
 
+        /*
         size_t nSize = GetSerializeSize(*this, SER_DISK, 0);
         int witnessversion = 0;
         std::vector<unsigned char> witnessprogram;
@@ -191,6 +192,10 @@ public:
         }
 
         return 3 * minRelayTxFee.GetFee(nSize);
+        */
+
+        // Fastcoin: Anything below 1 FST is always dust
+        return COIN;
     }
 
     bool IsDust(const CFeeRate &minRelayTxFee) const
@@ -303,7 +308,7 @@ class CTransaction
 {
 public:
     // Default transaction version.
-    // Dogecoin: Temporarily restricted to v1 for compatibility with 1.10
+    // Fastcoin: Temporarily restricted to v1 for compatibility with 1.10
     static const int32_t CURRENT_VERSION=1;
 
     // Changing the default transaction version requires a two step process: first

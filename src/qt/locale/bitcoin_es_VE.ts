@@ -41,10 +41,50 @@
         <source>&amp;Delete</source>
         <translation>&amp;Borrar</translation>
     </message>
+    <message>
+        <source>Choose the address to send coins to</source>
+        <translation>Escoja la direccion a enviar las monedas</translation>
+    </message>
+    <message>
+        <source>Choose the address to receive coins with</source>
+        <translation>Elige la dirección para recibir monedas</translation>
+    </message>
+    <message>
+        <source>Sending addresses</source>
+        <translation>Envío de direcciones</translation>
+    </message>
+    <message>
+        <source>Receiving addresses</source>
+        <translation>Direcciones de recepción</translation>
+    </message>
+    <message>
+        <source>These are your Fastcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Estas son tus direcciones Fastcoin para realizar pagos. Verifica siempre el monto y la dirección de recepción antes de enviar monedas. </translation>
+    </message>
+    <message>
+        <source>These are your Fastcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Estas son tus direcciones Fastcoin para recibir pagos. Es recomendable usar una nueva dirección de recibo para cada transacción.</translation>
+    </message>
+    <message>
+        <source>Copy &amp;Label</source>
+        <translation>Copiar &amp;Etiqueta</translation>
+    </message>
+    <message>
+        <source>&amp;Edit</source>
+        <translation>&amp;Editar</translation>
+    </message>
+    <message>
+        <source>Export Address List</source>
+        <translation>Exportar lista de direcciones</translation>
+    </message>
     </context>
 <context>
     <name>AddressTableModel</name>
-    </context>
+    <message>
+        <source>(no label)</source>
+        <translation>(sin etiqueta)</translation>
+    </message>
+</context>
 <context>
     <name>AskPassphraseDialog</name>
     <message>
@@ -68,7 +108,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>DogecoinGUI</name>
+    <name>BitcoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Firmar &amp;mensaje...</translation>
@@ -106,7 +146,7 @@
         <translation>&amp;Opciones...</translation>
     </message>
     <message>
-        <source>&amp;Much receiving addresses...</source>
+        <source>&amp;Receiving addresses...</source>
         <translation>Recepción de direcciones</translation>
     </message>
     <message>
@@ -114,8 +154,8 @@
         <translation>Reindexando bloques en el disco...</translation>
     </message>
     <message>
-        <source>Send coins to a Dogecoin address</source>
-        <translation>Enviar monedas a una dirección Dogecoin</translation>
+        <source>Send coins to a Fastcoin address</source>
+        <translation>Enviar monedas a una dirección Fastcoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -130,19 +170,19 @@
         <translation>Abre la consola de depuración y diágnostico</translation>
     </message>
     <message>
-        <source>Dogecoin</source>
-        <translation>Dogecoin</translation>
+        <source>Fastcoin</source>
+        <translation>Fastcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
         <translation>Billetera</translation>
     </message>
     <message>
-        <source>&amp;Such Send</source>
+        <source>&amp;Send</source>
         <translation>&amp;Enviar</translation>
     </message>
     <message>
-        <source>&amp;Much Receive</source>
+        <source>&amp;Receive</source>
         <translation>&amp;Recibir</translation>
     </message>
     <message>
@@ -158,12 +198,12 @@
         <translation>Encriptar las llaves privadas que pertenecen a tu billetera</translation>
     </message>
     <message>
-        <source>Sign messages with your Dogecoin addresses to prove you own them</source>
-        <translation>Firma mensajes con tus direcciones Dogecoin para probar que eres dueño de ellas</translation>
+        <source>Sign messages with your Fastcoin addresses to prove you own them</source>
+        <translation>Firma mensajes con tus direcciones Fastcoin para probar que eres dueño de ellas</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Dogecoin addresses</source>
-        <translation>Verificar mensajes para asegurar que estaban firmados con direcciones Dogecoin especificas</translation>
+        <source>Verify messages to ensure they were signed with specified Fastcoin addresses</source>
+        <translation>Verificar mensajes para asegurar que estaban firmados con direcciones Fastcoin especificas</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -292,6 +332,34 @@
         <source>Confirmed</source>
         <translation>Confirmado</translation>
     </message>
+    <message>
+        <source>Copy quantity</source>
+        <translation>Copiar cantidad</translation>
+    </message>
+    <message>
+        <source>Copy fee</source>
+        <translation>Copiar comisión</translation>
+    </message>
+    <message>
+        <source>Copy bytes</source>
+        <translation>Copiar bytes</translation>
+    </message>
+    <message>
+        <source>Copy change</source>
+        <translation>Copiar cambio</translation>
+    </message>
+    <message>
+        <source>yes</source>
+        <translation>si</translation>
+    </message>
+    <message>
+        <source>no</source>
+        <translation>no</translation>
+    </message>
+    <message>
+        <source>(no label)</source>
+        <translation>(sin etiqueta)</translation>
+    </message>
     </context>
 <context>
     <name>EditAddressDialog</name>
@@ -365,12 +433,24 @@
 <context>
     <name>Intro</name>
     <message>
+        <source>Welcome</source>
+        <translation>Bienvenido</translation>
+    </message>
+    <message>
+        <source>Welcome to %1.</source>
+        <translation>Bienvenido a %1.</translation>
+    </message>
+    <message>
         <source>Use the default data directory</source>
         <translation>Usar el directorio de datos por defecto</translation>
     </message>
     <message>
         <source>Use a custom data directory:</source>
         <translation>Usa un directorio de datos personalizado:</translation>
+    </message>
+    <message>
+        <source>Fastcoin</source>
+        <translation>Fastcoin</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -428,6 +508,10 @@
     <message>
         <source>none</source>
         <translation>ninguno</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>Error</translation>
     </message>
     </context>
 <context>
@@ -503,6 +587,10 @@
     </context>
 <context>
     <name>RecentRequestsTableModel</name>
+    <message>
+        <source>(no label)</source>
+        <translation>(sin etiqueta)</translation>
+    </message>
     </context>
 <context>
     <name>SendCoinsDialog</name>
@@ -530,7 +618,27 @@
         <source>Dust:</source>
         <translation>Polvo:</translation>
     </message>
-    </context>
+    <message>
+        <source>Copy quantity</source>
+        <translation>Copiar cantidad</translation>
+    </message>
+    <message>
+        <source>Copy fee</source>
+        <translation>Copiar comisión</translation>
+    </message>
+    <message>
+        <source>Copy bytes</source>
+        <translation>Copiar bytes</translation>
+    </message>
+    <message>
+        <source>Copy change</source>
+        <translation>Copiar cambio</translation>
+    </message>
+    <message>
+        <source>(no label)</source>
+        <translation>(sin etiqueta)</translation>
+    </message>
+</context>
 <context>
     <name>SendCoinsEntry</name>
     <message>
@@ -565,6 +673,10 @@
     </context>
 <context>
     <name>TransactionTableModel</name>
+    <message>
+        <source>(no label)</source>
+        <translation>(sin etiqueta)</translation>
+    </message>
     </context>
 <context>
     <name>TransactionView</name>
@@ -582,7 +694,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>dogecoin-core</name>
+    <name>bitcoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Opciones:</translation>
@@ -608,8 +720,8 @@
         <translation>Correr en segundo plano como daemon y aceptar comandos</translation>
     </message>
     <message>
-        <source>Dogecoin Core</source>
-        <translation>Dogecoin Core</translation>
+        <source>Fastcoin Core</source>
+        <translation>Fastcoin Core</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
@@ -632,8 +744,56 @@
         <translation>Información</translation>
     </message>
     <message>
+        <source>Transaction amount too small</source>
+        <translation>Transacción muy pequeña</translation>
+    </message>
+    <message>
+        <source>Transaction too large</source>
+        <translation>Transacción muy grande</translation>
+    </message>
+    <message>
         <source>Warning</source>
         <translation>Advertencia</translation>
+    </message>
+    <message>
+        <source>This is the minimum transaction fee you pay on every transaction.</source>
+        <translation>Esta es la tarifa mínima a pagar en cada transacción.</translation>
+    </message>
+    <message>
+        <source>This is the transaction fee you will pay if you send a transaction.</source>
+        <translation>Esta es la tarifa a pagar si realizas una transacción.</translation>
+    </message>
+    <message>
+        <source>Transaction amounts must not be negative</source>
+        <translation>Los montos de la transacción no debe ser negativo</translation>
+    </message>
+    <message>
+        <source>Transaction has too long of a mempool chain</source>
+        <translation>La transacción tiene largo tiempo en una cadena mempool</translation>
+    </message>
+    <message>
+        <source>Transaction must have at least one recipient</source>
+        <translation>La transacción debe tener al menos un destinatario</translation>
+    </message>
+    <message>
+        <source>Insufficient funds</source>
+        <translation>Fondos insuficientes</translation>
+    </message>
+    <message>
+        <source>Loading wallet...</source>
+        <translation>Cargando monedero...</translation>
+    </message>
+    <message>
+        <source>Cannot downgrade wallet</source>
+        <translation>No se puede rebajar monedero</translation>
+    </message>
+    <message>
+        <source>Rescanning...</source>
+        <translation>Escaneando...</translation>
+    </message>
+    <message>
+        <source>Done loading</source>
+        <translation>Carga lista</translation>
     </message>
     <message>
         <source>Error</source>

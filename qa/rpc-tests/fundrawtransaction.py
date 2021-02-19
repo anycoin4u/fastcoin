@@ -152,7 +152,7 @@ class RawTransactionsTest(BitcoinTestFramework):
         utx = get_unspent(self.nodes[2].listunspent(), 5)
 
         inputs  = [ {'txid' : utx['txid'], 'vout' : utx['vout']}]
-        # Dogecoin: Fee is exact, do not use tolerance
+        # Fastcoin: Fee is exact, do not use tolerance
         outputs = { self.nodes[0].getnewaddress() : Decimal(5.0) - fee }
         rawtx   = self.nodes[2].createrawtransaction(inputs, outputs)
         dec_tx  = self.nodes[2].decoderawtransaction(rawtx)
@@ -201,7 +201,7 @@ class RawTransactionsTest(BitcoinTestFramework):
         utx = get_unspent(self.nodes[2].listunspent(), 5)
 
         inputs  = [ {'txid' : utx['txid'], 'vout' : utx['vout']} ]
-        # Dogecoin: Reduce this output so the fee doesn't leave us with no change
+        # Fastcoin: Reduce this output so the fee doesn't leave us with no change
         outputs = { self.nodes[0].getnewaddress() : Decimal(2.5) }
         rawtx   = self.nodes[2].createrawtransaction(inputs, outputs)
         dec_tx  = self.nodes[2].decoderawtransaction(rawtx)
@@ -516,7 +516,7 @@ class RawTransactionsTest(BitcoinTestFramework):
 
         #fund a tx with ~20 small inputs
         inputs = []
-        # Dogecoin: TX size rounding gives us a fee of 4 DOGE
+        # Fastcoin: TX size rounding gives us a fee of 4 FST
         outputs = {self.nodes[0].getnewaddress():15,self.nodes[0].getnewaddress():4}
         rawTx = self.nodes[1].createrawtransaction(inputs, outputs)
         fundedTx = self.nodes[1].fundrawtransaction(rawTx)

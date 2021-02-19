@@ -1,4 +1,4 @@
-// Copyright (c) 2015 The Dogecoin Core developers
+// Copyright (c) 2015 The Fastcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -7,19 +7,12 @@
 
 #include "policy/policy.h"
 #include "arith_uint256.h"
-#include "dogecoin.h"
+#include "fastcoin.h"
 #include "txmempool.h"
 #include "util.h"
 #include "validation.h"
 
-int static generateMTRandom(unsigned int s, int range)
-{
-    boost::mt19937 gen(s);
-    boost::uniform_int<> dist(1, range);
-    return dist(gen);
-}
-
-// Dogecoin: Normally minimum difficulty blocks can only occur in between
+// Fastcoin: Normally minimum difficulty blocks can only occur in between
 // retarget blocks. However, once we introduce Digishield every block is
 // a retarget, so we need to handle minimum difficulty on all blocks.
 bool AllowDigishieldMinDifficultyForBlock(const CBlockIndex* pindexLast, const CBlockHeader *pblock, const Consensus::Params& params)
@@ -29,17 +22,16 @@ bool AllowDigishieldMinDifficultyForBlock(const CBlockIndex* pindexLast, const C
         return false;
 
     // check if the chain allows minimum difficulty blocks on recalc blocks
-    if (pindexLast->nHeight < 157500)
-    // if (!params.fPowAllowDigishieldMinDifficultyBlocks)
+    if (pindexLast->nHeight < 11327900)  //digishieldConsensus.nHeightEffective = 11327900;
         return false;
 
     // Allow for a minimum block time if the elapsed time > 2*nTargetSpacing
     return (pblock->GetBlockTime() > pindexLast->GetBlockTime() + params.nPowTargetSpacing*2);
 }
 
-unsigned int CalculateDogecoinNextWorkRequired(const CBlockIndex* pindexLast, int64_t nFirstBlockTime, const Consensus::Params& params)
+unsigned int CalculateFastcoinNextWorkRequired(const CBlockIndex* pindexLast, int64_t nFirstBlockTime, const Consensus::Params& params)
 {
-    int nHeight = pindexLast->nHeight + 1;
+    
     const int64_t retargetTimespan = params.nPowTargetTimespan;
     const int64_t nActualTimespan = pindexLast->GetBlockTime() - nFirstBlockTime;
     int64_t nModulatedTimespan = nActualTimespan;
@@ -53,12 +45,6 @@ unsigned int CalculateDogecoinNextWorkRequired(const CBlockIndex* pindexLast, in
 
         nMinTimespan = retargetTimespan - (retargetTimespan / 4);
         nMaxTimespan = retargetTimespan + (retargetTimespan / 2);
-    } else if (nHeight > 10000) {
-        nMinTimespan = retargetTimespan / 4;
-        nMaxTimespan = retargetTimespan * 4;
-    } else if (nHeight > 5000) {
-        nMinTimespan = retargetTimespan / 8;
-        nMaxTimespan = retargetTimespan * 4;
     } else {
         nMinTimespan = retargetTimespan / 16;
         nMaxTimespan = retargetTimespan * 4;
@@ -122,31 +108,39 @@ bool CheckAuxPowProofOfWork(const CBlockHeader& block, const Consensus::Params& 
     return true;
 }
 
-CAmount GetDogecoinBlockSubsidy(int nHeight, const Consensus::Params& consensusParams, uint256 prevHash)
+CAmount GetFastcoinBlockSubsidy(int nHeight, const Consensus::Params& consensusParams, uint256 prevHash)
 {
     int halvings = nHeight / consensusParams.nSubsidyHalvingInterval;
-
-    if (!consensusParams.fSimplifiedRewards)
-    {
-        // Old-style rewards derived from the previous block hash
-        const std::string cseed_str = prevHash.ToString().substr(7, 7);
-        const char* cseed = cseed_str.c_str();
-        char* endp = NULL;
-        long seed = strtol(cseed, &endp, 16);
-        CAmount maxReward = (1000000 >> halvings) - 1;
-        int rand = generateMTRandom(seed, maxReward);
-
-        return (1 + rand) * COIN;
-    } else if (nHeight < (6 * consensusParams.nSubsidyHalvingInterval)) {
-        // New-style constant rewards for each halving interval
-        return (500000 * COIN) >> halvings;
-    } else {
-        // Constant inflation
-        return 10000 * COIN;
-    }
+    if(nHeight <= consensusParams.SubnHeight){
+    // Force block reward to zero when right shift is undefined.
+    if (halvings >= 64)
+      {
+         return 0;
+      }
+    
+    CAmount nSubsidy = 32 * COIN; 
+    // Subsidy is cut in half every 210,000 blocks which will occur approximately every 4 years.
+    nSubsidy >>= halvings;
+    return nSubsidy;
+    
+     }else if(nHeight > consensusParams.SubnHeight && nHeight <= (consensusParams.SubnHeight + consensusParams.SubBlks)){
+     CAmount nSubsidy = consensusParams.SubV * COIN;
+    return nSubsidy;
+     }else {
+     // Force block reward to zero when right shift is undefined.
+    if (halvings >= 64)
+      {
+         return 0;
+      }
+    
+    CAmount nSubsidy = 32 * COIN; 
+    // Subsidy is cut in half every 210,000 blocks which will occur approximately every 4 years.
+    nSubsidy >>= halvings;
+    return nSubsidy;
+     }
 }
 
-CAmount GetDogecoinMinRelayFee(const CTransaction& tx, unsigned int nBytes, bool fAllowFree)
+CAmount GetFastcoinMinRelayFee(const CTransaction& tx, unsigned int nBytes, bool fAllowFree)
 {
     {
         LOCK(mempool.cs);
@@ -159,7 +153,7 @@ CAmount GetDogecoinMinRelayFee(const CTransaction& tx, unsigned int nBytes, bool
     }
 
     CAmount nMinFee = ::minRelayTxFee.GetFee(nBytes);
-    nMinFee += GetDogecoinDustFee(tx.vout, ::minRelayTxFee);
+    nMinFee += GetFastcoinDustFee(tx.vout, ::minRelayTxFee);
 
     if (fAllowFree)
     {
@@ -176,13 +170,12 @@ CAmount GetDogecoinMinRelayFee(const CTransaction& tx, unsigned int nBytes, bool
     return nMinFee;
 }
 
-CAmount GetDogecoinDustFee(const std::vector<CTxOut> &vout, CFeeRate &baseFeeRate) {
+CAmount GetFastcoinDustFee(const std::vector<CTxOut> &vout, CFeeRate &baseFeeRate) {
     CAmount nFee = 0;
 
     // To limit dust spam, add base fee for each output less than a COIN
     BOOST_FOREACH(const CTxOut& txout, vout)
-        // if (txout.IsDust(::minRelayTxFee))
-        if (txout.nValue < COIN)
+        if (txout.IsDust(::minRelayTxFee))
             nFee += baseFeeRate.GetFeePerK();
 
     return nFee;

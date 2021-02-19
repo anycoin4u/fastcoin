@@ -969,8 +969,8 @@ UniValue gettxout(const JSONRPCRequest& request)
             "     \"hex\" : \"hex\",        (string) \n"
             "     \"reqSigs\" : n,          (numeric) Number of required signatures\n"
             "     \"type\" : \"pubkeyhash\", (string) The type, eg pubkeyhash\n"
-            "     \"addresses\" : [          (array of string) array of dogecoin addresses\n"
-            "        \"address\"     (string) dogecoin address\n"
+            "     \"addresses\" : [          (array of string) array of fastcoin addresses\n"
+            "        \"address\"     (string) fastcoin address\n"
             "        ,...\n"
             "     ]\n"
             "  },\n"
@@ -1076,7 +1076,7 @@ static UniValue SoftForkMajorityDesc(int version, CBlockIndex* pindex, const Con
             CBlockIndex* pstart = pindex;
             for (int i = 0; i < consensusParams.nMajorityWindow && pstart != NULL; i++)
             {
-                if (pstart->nVersion >= version)
+                if (pstart->GetBaseVersion() >= version)
                     ++nFound;
                 pstart = pstart->pprev;
             }

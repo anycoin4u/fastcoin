@@ -25,7 +25,7 @@ class GetAuxBlockTest (BitcoinTestFramework):
     assert_equal (auxblock['previousblockhash'], blocktemplate['previousblockhash'])
 
     # Compare target and take byte order into account.
-    target = auxblock['_target']
+    target = auxblock['target']
     reversedTarget = auxpow.reverseHex (target)
     assert_equal (reversedTarget, blocktemplate['target'])
 
@@ -115,7 +115,7 @@ class GetAuxBlockTest (BitcoinTestFramework):
     blk = self.nodes[1].getblock (auxblock['hash'])
     tx = self.nodes[1].getrawtransaction (blk['tx'][0], 1)
     coinbase = tx['vin'][0]['coinbase']
-    assert_equal ("01%02x01" % auxblock['height'], coinbase[0 : 6]) # DOGE: We mine less blocks in these tests
+    assert_equal ("01%02x01" % auxblock['height'], coinbase[0 : 6]) # FST: We mine less blocks in these tests
 
 if __name__ == '__main__':
   GetAuxBlockTest ().main ()
