@@ -1,33 +1,33 @@
-# /etc/conf.d/dogecoind: config file for /etc/init.d/dogecoind
+# /etc/conf.d/fastcoind: config file for /etc/init.d/fastcoind
 
 # Config file location
-#DOGECOIND_CONFIGFILE="/etc/dogecoin/dogecoin.conf"
+#FASTCOIND_CONFIGFILE="/etc/fastcoin/fastcoin.conf"
 
-# What directory to write pidfile to?  (created and owned by $DOGECOIND_USER)
-#DOGECOIND_PIDDIR="/var/run/dogecoind"
+# What directory to write pidfile to?  (created and owned by $FASTCOIND_USER)
+#FASTCOIND_PIDDIR="/var/run/fastcoind"
 
 # What filename to give the pidfile
-#DOGECOIND_PIDFILE="${DOGECOIND_PIDDIR}/dogecoind.pid"
+#FASTCOIND_PIDFILE="${FASTCOIND_PIDDIR}/fastcoind.pid"
 
-# Where to write dogecoind data (be mindful that the blockchain is large)
-#DOGECOIND_DATADIR="/var/lib/dogecoind"
+# Where to write fastcoind data (be mindful that the blockchain is large)
+#FASTCOIND_DATADIR="/var/lib/fastcoind"
 
-# User and group to own dogecoind process
-#DOGECOIND_USER="dogecoin"
-#DOGECOIND_GROUP="dogecoin"
+# User and group to own fastcoind process
+#FASTCOIND_USER="fastcoin"
+#FASTCOIND_GROUP="fastcoin"
 
-# Path to dogecoind executable
-#DOGECOIND_BIN="/usr/bin/dogecoind"
+# Path to fastcoind executable
+#FASTCOIND_BIN="/usr/bin/fastcoind"
 
-# Nice value to run dogecoind under
-#DOGECOIND_NICE=0
+# Nice value to run fastcoind under
+#FASTCOIND_NICE=0
 
 # Additional options (avoid -conf and -datadir, use flags above)
-DOGECOIND_OPTS="-disablewallet"
+FASTCOIND_OPTS="-disablewallet"
 
-# The timeout in seconds OpenRC will wait for dogecoind to terminate
+# The timeout in seconds OpenRC will wait for fastcoind to terminate
 # after a SIGTERM has been raised.
 # Note that this will be mapped as argument to start-stop-daemon's
 # '--retry' option, which means you can specify a retry schedule
 # here. For more information see man 8 start-stop-daemon.
-DOGECOIND_SIGTERM_TIMEOUT=60
+FASTCOIND_SIGTERM_TIMEOUT=60

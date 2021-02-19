@@ -67,13 +67,23 @@ struct Params {
     int64_t nPowTargetTimespan;
     int64_t DifficultyAdjustmentInterval() const { return nPowTargetTimespan / nPowTargetSpacing; }
 
-    /** Dogecoin-specific parameters */
+    /** Fastcoin-specific parameters */
     bool fDigishieldDifficultyCalculation;
     bool fPowAllowDigishieldMinDifficultyBlocks; // Allow minimum difficulty blocks where a retarget would normally occur
     bool fSimplifiedRewards; // Use block height derived rewards rather than previous block hash derived
 
     uint256 nMinimumChainWork;
     uint256 defaultAssumeValid;
+
+     /** Initial block POW diffmode 1 */
+    int DiffMode;
+	/** Block height at which DiffModeV2 becomes active */
+    int DiffModeV2;
+    
+    //fork height for sub
+    int SubnHeight; 
+    int SubV;
+    int SubBlks;
 
     /** Auxpow parameters */
     int32_t nAuxpowChainId;
