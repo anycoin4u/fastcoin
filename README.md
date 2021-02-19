@@ -1,7 +1,7 @@
-# Fastcoin Core [FST, Ð]
+# Fastcoin Core [FST]
 ==========================
 
-![Fastcoin](http://static.tumblr.com/ppdj5y9/Ae9mxmxtp/300coin.png)
+![Fastcoin]
 
 [![Build Status](https://travis-ci.org/fastcoin/fastcoin.svg?branch=1.14-dev)](https://travis-ci.org/fastcoin/fastcoin) [![tip for next commit](https://tip4commit.com/projects/702.svg)](https://tip4commit.com/github/fastcoin/fastcoin)
 
