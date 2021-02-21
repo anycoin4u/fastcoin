@@ -88,7 +88,7 @@ int BitcoinUnits::decimals(int unit)
     case BTC: return 8;
     case mBTC: return 5;
     case uBTC: return 2;
-    default: return 0;
+    default: return 8;
     }
 }
 
