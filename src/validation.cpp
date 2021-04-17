@@ -1172,7 +1172,7 @@ static bool ReadBlockOrHeader(T& block, const CDiskBlockPos& pos, const Consensu
 }
 
 template<typename T>
-static bool ReadBlockOrHeader(T& block, const CBlockIndex* pindex, const Consensus::Params& consensusParams, bool fCheckPOW)Params)
+static bool ReadBlockOrHeader(T& block, const CBlockIndex* pindex, const Consensus::Params& consensusParams, bool fCheckPOW)
 {
     if (!ReadBlockOrHeader(block, pindex->GetBlockPos(), consensusParams, fCheckPOW))
         return false;
@@ -3358,6 +3358,8 @@ bool TestBlockValidity(CValidationState& state, const CChainParams& chainparams,
 /* Calculate the amount of disk space the block & undo files currently use */
 uint64_t CalculateCurrentUsage()
 {
+    LOCK(cs_LastBlockFile);
+    
     uint64_t retval = 0;
     BOOST_FOREACH(const CBlockFileInfo &file, vinfoBlockFile) {
         retval += file.nSize + file.nUndoSize;
@@ -3368,6 +3370,8 @@ uint64_t CalculateCurrentUsage()
 /* Prune a block file (modify associated database entries)*/
 void PruneOneBlockFile(const int fileNumber)
 {
+    LOCK(cs_LastBlockFile);
+    
     for (BlockMap::iterator it = mapBlockIndex.begin(); it != mapBlockIndex.end(); ++it) {
         CBlockIndex* pindex = it->second;
         if (pindex->nFile == fileNumber) {
@@ -4233,6 +4237,8 @@ std::string CBlockFileInfo::ToString() const
 
 CBlockFileInfo* GetBlockFileInfo(size_t n)
 {
+    LOCK(cs_LastBlockFile);
+    
     return &vinfoBlockFile.at(n);
 }
 

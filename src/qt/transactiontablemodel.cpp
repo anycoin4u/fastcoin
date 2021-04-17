@@ -796,6 +796,6 @@ void TransactionTableModel::unsubscribeFromCoreSignals()
                                                             boost::placeholders::_3));
     wallet->ShowProgress.disconnect(boost::bind(ShowProgress, this,
                                                 boost::placeholders::_1,
-                                                boost::placeholders::_2));NotifyTransactionChanged, this, _1, _2, _3));
+                                                boost::placeholders::_2));
     
 }
