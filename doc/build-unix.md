@@ -34,7 +34,7 @@ These dependencies are required:
  Library     | Purpose          | Description
  ------------|------------------|----------------------
  libssl      | Crypto           | Random Number Generation, Elliptic Curve Cryptography
- libboost    | Utility          | Library for threading, data structures, etc
+ libboost    | Utility          | Library for threading, data structures, etc Requires 1.65 or greater.
  libevent    | Networking       | OS independent asynchronous networking
 
 Optional dependencies:
@@ -190,13 +190,19 @@ cd $BITCOIN_ROOT
 
 **Note**: You only need Berkeley DB if the wallet is enabled (see the section *Disable-Wallet mode* below).
 
-Boost
+Boost 1.65
 -----
 If you need to build Boost yourself:
 
-	sudo su
-	./bootstrap.sh
-	./bjam install
+	wget https://dl.bintray.com/boostorg/release/1.65.1/source/boost_1_65_1.tar.gz
+    echo '8aa4e330c870ef50a896634c931adf468b21f8a69b77007e45c444151229f665  boost_1_65_1.tar.gz' | sha256sum -c
+    tar -xzvf boost_1_65_1.tar.gz
+    cd boost_1_65_1
+    ./bootstrap.sh --prefix=/usr/local link=static threading=multi
+    ./bjam 
+    ./b2 --layout=tagged variant=release link=static --with-chrono --with-date_time --with-filesystem --with-program_options --with-serialization --with-system --with-thread --prefix=/usr/local
+    sudo ./b2 install
+
 
 
 Security
