@@ -67,11 +67,14 @@ To build executables for Windows 64-bit, install the following dependencies:
 
 Then build using:
 
+    git clone https://github.com/fastcoin-project/fastcoin.git
+    cd fastcoin
+    git checkout 1.14.3-release
     cd depends
     make HOST=x86_64-w64-mingw32
     cd ..
-    ./autogen.sh # not required when building from tarball
-    CONFIG_SITE=$PWD/depends/x86_64-w64-mingw32/share/config.site ./configure --prefix=/
+    ./autogen.sh
+    CONFIG_SITE=$PWD/depends/x86_64-w64-mingw32/share/config.site ./configure --prefix=/ --disable-tests --disable-bench --enable-upnp-default
     make
 
 ## Building for 32-bit Windows
@@ -82,11 +85,14 @@ To build executables for Windows 32-bit, install the following dependencies:
 
 Then build using:
 
+    git clone https://github.com/fastcoin-project/fastcoin.git
+    cd fastcoin
+    git checkout 1.14.3-release
     cd depends
     make HOST=i686-w64-mingw32
     cd ..
     ./autogen.sh # not required when building from tarball
-    CONFIG_SITE=$PWD/depends/i686-w64-mingw32/share/config.site ./configure --prefix=/
+    CONFIG_SITE=$PWD/depends/i686-w64-mingw32/share/config.site ./configure --prefix=/ --disable-tests --disable-bench --enable-upnp-default
     make
 
 ## Depends system
