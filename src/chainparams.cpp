@@ -106,10 +106,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 0; // Disabled
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000d7a0bfb8cae6a7");
+        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000e22c0b614efbcd");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x4bd3308d384e80094e4659f9a3245e6f444688edbec0ad88b9a5dfd4be87454e"); 
+        consensus.defaultAssumeValid = uint256S("0xd1ad0a9c810b57033dc4df476ef83b26188753da033aaca46d9b28081b9203e2"); 
 
         // AuxPoW parameters
         consensus.nAuxpowChainId = 0x00F1; // 241
@@ -210,13 +210,14 @@ public:
         (11327901, uint256S("0xcae0cfb959b835374a7c8af920e5f71efd94035e2ff8c0af0d64d257dcaf612a"))
         (11327933, uint256S("0x891ebf78c6b4e4449a04eb1be7ad37a93193b74f5089246e888224b832c11485"))
         (11335834, uint256S("0x1c3e92d7bfd8f250b6f696de84334cb86bc789c8141316fbbed9469026298a34"))
+        (11400000, uint256S("0xd1ad0a9c810b57033dc4df476ef83b26188753da033aaca46d9b28081b9203e2"))
 
         };
 
         chainTxData = ChainTxData{
-            // Data as of block 77e3f4a4bcb4a2c15e8015525e3d15b466f6c022f6ca82698f329edef7d9777e (height 2510150).
+            // Data as of block d1ad0a9c810b57033dc4df476ef83b26188753da033aaca46d9b28081b9203e2 (height 11400000).
             // Tx estimate based on average of year 2018 (~27k transactions per day)
-            1613567233, // * UNIX timestamp of last checkpoint block
+            1617518434, // * UNIX timestamp of last checkpoint block
             13601906,   // * total number of transactions between genesis and last checkpoint
                         //   (the tx=... number in the SetBestChain debug.log lines)
             0.3125      // * estimated number of transactions per second after checkpoint
