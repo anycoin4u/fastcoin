@@ -69,7 +69,7 @@ Then build using:
 
     git clone https://github.com/fastcoin-project/fastcoin.git
     cd fastcoin
-    git checkout 1.14.3-release
+    git checkout 1.14.3.1-release
     cd depends
     make HOST=x86_64-w64-mingw32
     cd ..
@@ -87,7 +87,7 @@ Then build using:
 
     git clone https://github.com/fastcoin-project/fastcoin.git
     cd fastcoin
-    git checkout 1.14.3-release
+    git checkout 1.14.3.1-release
     cd depends
     make HOST=i686-w64-mingw32
     cd ..
