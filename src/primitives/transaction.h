@@ -178,7 +178,7 @@ public:
         if (scriptPubKey.IsUnspendable())
             return 0;
 
-        /*
+       
         size_t nSize = GetSerializeSize(*this, SER_DISK, 0);
         int witnessversion = 0;
         std::vector<unsigned char> witnessprogram;
@@ -192,10 +192,10 @@ public:
         }
 
         return 3 * minRelayTxFee.GetFee(nSize);
-        */
+        
 
         // Fastcoin: Anything below 1 FST is always dust
-        return COIN;
+        //return COIN;
     }
 
     bool IsDust(const CFeeRate &minRelayTxFee) const
